@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mathmazing Puzzles</title>
+    <link rel="stylesheet" href="/css/style1.css">
+</head>
+<body>
+    <nav class="navbar">
+        <ul>
+            <li><a href="/logout">Logout</a></li>
+        </ul>
+    </nav>
+
+    <h1>Mathmazing Puzzles</h1>
+
+    <section class="puzzle-grid">
+        <!-- Puzzle 3 (Top) - Fibonacci -->
+        <div id="puzzle3" class="puzzle">
+            <h2>Fibonacci Sequence</h2>
+            <p>Complete the sequence:</p>
+
+            <!-- Sequence slots -->
+            <div id="fib-sequence" style="display:flex; gap:10px; justify-content:center;">
+                <span class="number-slot" data-index="0">1</span>
+                <span class="number-slot" data-index="1">1</span>
+                <span class="number-slot" data-index="2">2</span>
+                <span class="number-slot" data-index="3">3</span>
+                <span class="number-slot" data-index="4">_</span>
+                <span class="number-slot" data-index="5">8</span>
+                <span class="number-slot" data-index="6">13</span>
+                <span class="number-slot" data-index="7">_</span>
+                <span class="number-slot" data-index="8">34</span>
+            </div>
+
+            <!-- Number pool for drag-and-drop -->
+            <div id="fib-numbers" class="button-container" style="margin-top:15px; justify-content:center;">
+                <div class="number" draggable="true">3</div>
+                <div class="number" draggable="true">4</div>
+                <div class="number" draggable="true">5</div>
+                <div class="number" draggable="true">6</div>
+                <div class="number" draggable="true">7</div>
+                <div class="number" draggable="true">18</div>
+                <div class="number" draggable="true">19</div>
+                <div class="number" draggable="true">20</div>
+                <div class="number" draggable="true">21</div>
+                <div class="number" draggable="true">22</div>
+                <div class="number" draggable="true">23</div>
+            </div>
+
+            <p id="fib-feedback" style="color:#ff5722;"></p>
+        </div>
+
+
+        <!-- Puzzle 1 (Left) - Maximum Product -->
+        <div id="puzzle1" class="puzzle">
+            <h2>Maximum Product</h2>
+            <p>Drag the digits to form two numbers that give the maximum product:</p>
+
+            <!-- Top row: the two numbers with slots and the multiplication sign -->
+            <div id="p1-container" style="display:flex; justify-content:center; gap:10px; margin-bottom:10px;">
+                <div id="p1-slots-left">
+                    <span class="number-slot" data-index="0">_</span>
+                    <span class="number-slot" data-index="1">_</span>
+                    <span class="number-slot" data-index="2">_</span>
+                </div>
+                <span style="font-size:1.5em; line-height:40px;">*</span>
+                <div id="p1-slots-right">
+                    <span class="number-slot" data-index="3">_</span>
+                    <span class="number-slot" data-index="4">_</span>
+                    <span class="number-slot" data-index="5">_</span>
+                </div>
+            </div>
+
+            <!-- Bottom row: the equals sign and result -->
+            <div style="text-align:center; margin-bottom:10px;">
+                <span style="font-size:1.2em;">=</span>
+                <span id="p1-result">?</span>
+            </div>
+
+            <!-- Number pool -->
+            <div id="p1-numbers" class="button-container" style="margin-top:15px;">
+                <div class="number" draggable="true">1</div>
+                <div class="number" draggable="true">2</div>
+                <div class="number" draggable="true">3</div>
+                <div class="number" draggable="true">4</div>
+                <div class="number" draggable="true">5</div>
+                <div class="number" draggable="true">6</div>
+            </div>
+
+            <p id="p1-feedback" style="color:#ff5722;"></p>
+        </div>
+
+
+        <!-- Puzzle 2 (Right) - Magic Square -->
+        <div id="puzzle2" class="puzzle">
+            <h2>Magic Square</h2>
+            <p>Arrange the numbers to form a 3x3 magic square:</p>
+            <div id="magic-square" style="display:grid; grid-template-columns: repeat(3, 50px); gap:5px;">
+                <span class="number-slot" data-index="0">_</span>
+                <span class="number-slot" data-index="1">_</span>
+                <span class="number-slot" data-index="2">_</span>
+                <span class="number-slot" data-index="3">_</span>
+                <span class="number-slot" data-index="4">_</span>
+                <span class="number-slot" data-index="5">_</span>
+                <span class="number-slot" data-index="6">_</span>
+                <span class="number-slot" data-index="7">_</span>
+                <span class="number-slot" data-index="8">_</span>
+            </div>
+            <div id="magic-numbers" class="button-container" style="margin-top:15px;">
+                <div class="number" draggable="true">1</div>
+                <div class="number" draggable="true">2</div>
+                <div class="number" draggable="true">3</div>
+                <div class="number" draggable="true">4</div>
+                <div class="number" draggable="true">5</div>
+                <div class="number" draggable="true">6</div>
+                <div class="number" draggable="true">7</div>
+                <div class="number" draggable="true">8</div>
+                <div class="number" draggable="true">9</div>
+            </div>
+            <p id="magic-feedback" style="color:#ff5722;"></p>
+        </div>
+
+        <!-- Center Link -->
+        <div id="center-link">
+            <a href="#" class="locked-link">L O C K E D</a>
+        </div>
+    </section>
+
+    <script src="/js/puzzles.js"></script>
+</body>
+</html>

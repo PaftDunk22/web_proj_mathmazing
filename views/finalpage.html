@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Final Page</title>
+
+<link rel="stylesheet" href="/css/style2.css">
+</head>
+<body>
+
+<div class="container">
+  <button class="top-button" id="game-button">GAME</button>
+
+  <div class="bottom-buttons">
+    <button id="btn1">?</button>
+    <button id="btn2">?</button>
+    <button id="btn3">?</button>
+    <button id="btn4">?</button>
+    <button id="btn5">?</button>
+  </div>
+</div>
+
+<script>
+  const gameLink = 'https://play.unity.com/en/games/86a0829f-7a8a-4545-8eb0-afcab2e64c8c/mathmazing'; // center button
+  const bottomLinks = ['https://www.thetalosprinciple.com/','https://virtualself.co/',
+  'http://lain.angelic-trust.net/wired.html','https://wwwwwwwww.jodi.org/','https://fauux.neocities.org/'];
+
+  // Open game button in a new tab
+  document.getElementById('game-button').onclick = () => {
+    window.open(gameLink, '_blank');
+  }
+
+  // Open bottom buttons in new tabs
+  bottomLinks.forEach((link, index) => {
+    document.getElementById(`btn${index+1}`).onclick = () => {
+      window.open(link, '_blank');
+    }
+  });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,221 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+body {
+    font-family: 'Press Start 2P', cursive;
+    margin: 0;
+    padding: 0;
+    background-color: #121212;
+    color: #ffffff;
+}
+
+.mainpage-upper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #2b2b2b;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.mainpage-upper img {
+    max-height: 200px;
+    width: auto;
+}
+
+
+.navbar {
+    background-color: #1f1f1f;
+    padding: 10px 0;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.navbar ul li {
+    display: inline;
+    padding: 0 20px;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+.navbar ul li a:hover {
+    color: #ff5722;
+}
+
+h1 {
+    text-align: center;
+    padding: 40px 20px;
+    margin: 0;
+    font-size: 2.5em;
+    background-color: #1f1f1f;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+section {
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 30px;
+    padding: 40px;
+    background-color: #1c1c1c;
+    justify-items: center;
+}
+
+.useraccountpart {
+    background-color: #2b2b2b;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    text-align: center;
+}
+
+.useraccountpart p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    color: #ff5722;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+button.login,
+button.register {
+    font-family: 'Press Start 2P', cursive;
+    background-color: #ff5722;
+    color: #ffffff;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.2em;
+    transition: background-color 0.3s ease;
+}
+
+button.login:hover,
+button.register:hover {
+    background-color: #e64a19;
+}
+
+button.login:focus,
+button.register:focus {
+    outline: none;
+}
+
+.puzzle-grid {
+    display: grid;
+    grid-template-areas:
+        "top top top"
+        "left center right";
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto 1fr;
+    gap: 20px;
+    padding: 20px;
+    height: 100vh;
+}
+
+.puzzle {
+    background-color: #2b2b2b;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#puzzle1 { grid-area: left; }
+#puzzle2 { grid-area: right; }
+#puzzle3 { grid-area: top; }
+#center-link { grid-area: center; display: flex; align-items: center; justify-content: center; }
+
+.number-slot, .number {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    margin: 5px;
+    line-height: 40px;
+    text-align: center;
+    background-color: #444;
+    border-radius: 5px;
+    cursor: grab;
+    user-select: none;
+}
+
+.number-slot {
+    background-color: #666;
+}
+
+#center-link .locked-link {
+    background-color: #555;
+    color: #aaa;
+    padding: 20px;
+    text-decoration: none;
+    border-radius: 10px;
+    cursor: not-allowed;
+}
+
+#center-link .unlocked-link {
+    background-color: #ff5722;
+    color: #fff;
+    padding: 20px;
+    text-decoration: none;
+    border-radius: 10px;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #1f1f1f;
+    color: #ffffff;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.2);
+}
+
+input, textarea {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 14px;
+    color: #000000;
+    background-color: #ffffff;
+    padding: 10px;
+    border: 2px solid #000000;
+    border-radius: 4px;
+}
+
+input::placeholder, textarea::placeholder {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 14px;
+    color: #888888;
+}
+
+.form-submit-button {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 14px;
+    color: #ffffff;
+    background-color: #121212;
+    border: 2px solid #ffffff;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.form-submit-button:hover {
+    background-color: #1a1a1a;
+}
